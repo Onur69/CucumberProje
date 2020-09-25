@@ -269,12 +269,14 @@ formatter.before({
   "status": "passed"
 });
 formatter.step({
-  "name": "kullanici amazon sayfasina gider",
+  "name": "kullanici \"http:/amazon.com\" sayfasina gider",
   "keyword": "Given "
 });
-formatter.match({});
+formatter.match({
+  "location": "stepdefinitions.EbayStepDefinition.kullanici_sayfasina_gider(java.lang.String)"
+});
 formatter.result({
-  "status": "undefined"
+  "status": "passed"
 });
 formatter.scenario({
   "name": "TC02_kullanici amazonda arama yapar",
@@ -290,20 +292,24 @@ formatter.scenario({
   ]
 });
 formatter.step({
-  "name": "kullanici headphones aramasi yapar",
+  "name": "kullanici amazonda aramakutusuna \"head phones\" yazar ve arar",
   "keyword": "And "
 });
-formatter.match({});
+formatter.match({
+  "location": "stepdefinitions.AmazonStepDefinition.kullanici_amazonda_aramakutusuna_yazar_ve_arar(java.lang.String)"
+});
 formatter.result({
-  "status": "undefined"
+  "status": "passed"
 });
 formatter.step({
-  "name": "kullanici sonuc sayisini ekrana yazdirir",
+  "name": "kullanici amazonda sonuc sayisini ekrana yazdirir",
   "keyword": "Then "
 });
-formatter.match({});
+formatter.match({
+  "location": "stepdefinitions.AmazonStepDefinition.kullanici_amazonda_sonuc_sayisini_ekrana_yazdirir()"
+});
 formatter.result({
-  "status": "undefined"
+  "status": "passed"
 });
 formatter.after({
   "status": "passed"

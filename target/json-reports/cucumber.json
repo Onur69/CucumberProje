@@ -3,7 +3,7 @@
     "line": 2,
     "elements": [
       {
-        "start_timestamp": "2020-09-25T12:24:12.368Z",
+        "start_timestamp": "2020-09-25T13:01:10.944Z",
         "before": [
           {
             "result": {
@@ -22,7 +22,7 @@
         "after": [
           {
             "result": {
-              "duration": 2214000000,
+              "duration": 2849000000,
               "status": "passed"
             },
             "match": {
@@ -35,7 +35,7 @@
         "steps": [
           {
             "result": {
-              "duration": 13858000000,
+              "duration": 11113000000,
               "status": "passed"
             },
             "line": 4,
@@ -53,7 +53,7 @@
           },
           {
             "result": {
-              "duration": 1608000000,
+              "duration": 1245000000,
               "status": "passed"
             },
             "line": 5,
@@ -71,7 +71,7 @@
           },
           {
             "result": {
-              "duration": 671000000,
+              "duration": 475000000,
               "status": "passed"
             },
             "line": 6,
@@ -89,7 +89,7 @@
         ]
       },
       {
-        "start_timestamp": "2020-09-25T12:24:30.733Z",
+        "start_timestamp": "2020-09-25T13:01:26.636Z",
         "before": [
           {
             "result": {
@@ -107,7 +107,7 @@
         "after": [
           {
             "result": {
-              "duration": 1997000000,
+              "duration": 3708000000,
               "status": "passed"
             },
             "match": {
@@ -120,7 +120,7 @@
         "steps": [
           {
             "result": {
-              "duration": 5457000000,
+              "duration": 5154000000,
               "status": "passed"
             },
             "line": 4,
@@ -138,7 +138,7 @@
           },
           {
             "result": {
-              "duration": 1355000000,
+              "duration": 1244000000,
               "status": "passed"
             },
             "line": 5,
@@ -156,7 +156,7 @@
           },
           {
             "result": {
-              "duration": 528000000,
+              "duration": 337000000,
               "status": "passed"
             },
             "line": 6,
@@ -174,7 +174,7 @@
         ]
       },
       {
-        "start_timestamp": "2020-09-25T12:24:40.073Z",
+        "start_timestamp": "2020-09-25T13:01:37.082Z",
         "before": [
           {
             "result": {
@@ -192,7 +192,7 @@
         "after": [
           {
             "result": {
-              "duration": 2120000000,
+              "duration": 887000000,
               "status": "passed"
             },
             "match": {
@@ -205,7 +205,7 @@
         "steps": [
           {
             "result": {
-              "duration": 4033000000,
+              "duration": 2194000000,
               "status": "passed"
             },
             "line": 4,
@@ -223,7 +223,7 @@
           },
           {
             "result": {
-              "duration": 1648000000,
+              "duration": 5608000000,
               "status": "passed"
             },
             "line": 5,
@@ -241,7 +241,7 @@
           },
           {
             "result": {
-              "duration": 503000000,
+              "duration": 164000000,
               "status": "passed"
             },
             "line": 6,
@@ -275,12 +275,11 @@
       }
     ]
   }
-]     },
-            "keyword": "Given "
+]iven "
           },
           {
             "result": {
-              "duration": 147000000,
+              "duration": 130000000,
               "status": "passed"
             },
             "line": 5,
@@ -298,7 +297,7 @@
           },
           {
             "result": {
-              "duration": 1722000000,
+              "duration": 1167000000,
               "status": "passed"
             },
             "line": 6,
@@ -316,7 +315,7 @@
           },
           {
             "result": {
-              "duration": 137000000,
+              "duration": 295000000,
               "status": "passed"
             },
             "line": 7,
@@ -373,20 +372,30 @@
         "steps": [
           {
             "result": {
-              "status": "undefined"
+              "duration": 1913000000,
+              "status": "passed"
             },
             "line": 6,
-            "name": "kullanici amazon sayfasina gider",
-            "match": {},
+            "name": "kullanici \"http:/amazon.com\" sayfasina gider",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"http:/amazon.com\"",
+                  "offset": 10
+                }
+              ],
+              "location": "stepdefinitions.EbayStepDefinition.kullanici_sayfasina_gider(java.lang.String)"
+            },
             "keyword": "Given "
           }
         ]
       },
       {
-        "start_timestamp": "2020-09-25T12:24:10.850Z",
+        "start_timestamp": "2020-09-25T13:01:10.441Z",
         "before": [
           {
             "result": {
+              "duration": 1000000,
               "status": "passed"
             },
             "match": {
@@ -401,7 +410,7 @@
         "after": [
           {
             "result": {
-              "duration": 463000000,
+              "duration": 503000000,
               "status": "passed"
             },
             "match": {
@@ -414,20 +423,32 @@
         "steps": [
           {
             "result": {
-              "status": "undefined"
+              "duration": 1783000000,
+              "status": "passed"
             },
             "line": 9,
-            "name": "kullanici headphones aramasi yapar",
-            "match": {},
+            "name": "kullanici amazonda aramakutusuna \"head phones\" yazar ve arar",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"head phones\"",
+                  "offset": 33
+                }
+              ],
+              "location": "stepdefinitions.AmazonStepDefinition.kullanici_amazonda_aramakutusuna_yazar_ve_arar(java.lang.String)"
+            },
             "keyword": "And "
           },
           {
             "result": {
-              "status": "undefined"
+              "duration": 664000000,
+              "status": "passed"
             },
             "line": 10,
-            "name": "kullanici sonuc sayisini ekrana yazdirir",
-            "match": {},
+            "name": "kullanici amazonda sonuc sayisini ekrana yazdirir",
+            "match": {
+              "location": "stepdefinitions.AmazonStepDefinition.kullanici_amazonda_sonuc_sayisini_ekrana_yazdirir()"
+            },
             "keyword": "Then "
           }
         ],
@@ -461,7 +482,7 @@
     "line": 2,
     "elements": [
       {
-        "start_timestamp": "2020-09-25T12:24:11.320Z",
+        "start_timestamp": "2020-09-25T13:01:15.317Z",
         "before": [
           {
             "result": {
@@ -479,7 +500,7 @@
         "after": [
           {
             "result": {
-              "duration": 457000000,
+              "duration": 523000000,
               "status": "passed"
             },
             "match": {
@@ -492,7 +513,7 @@
         "steps": [
           {
             "result": {
-              "duration": 1883000000,
+              "duration": 1646000000,
               "status": "passed"
             },
             "line": 4,
@@ -510,7 +531,7 @@
           },
           {
             "result": {
-              "duration": 1882000000,
+              "duration": 2171000000,
               "status": "passed"
             },
             "line": 6,
@@ -528,7 +549,7 @@
           },
           {
             "result": {
-              "duration": 159000000,
+              "duration": 37000000,
               "status": "passed"
             },
             "line": 7,
