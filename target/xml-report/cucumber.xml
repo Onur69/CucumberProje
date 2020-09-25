@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<testsuite errors="0" failures="0" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="3" time="36.525">
+<testcase classname="Walmart Urun Arama" name="TC08_kullanici walmartta urun arar" time="18.36">
+<system-out><![CDATA[Given kullanici "https://walmart.com" sayfasina gider.......................passed
+And kullanici walmart aramakutusuna "calculator" yazar ve arar..............passed
+Then kullanici walmart sonuc sayisini ekrana yazdirir.......................passed
+]]></system-out>
+</testcase>
+<testcase classname="Walmart Urun Arama" name="TC08_kullanici walmartta urun arar 2" time="9.337">
+<system-out><![CDATA[Given kullanici "https://walmart.com" sayfasina gider.......................passed
+And kullanici walmart aramakutusuna "watch" yazar ve arar...................passed
+Then kullanici walmart sonuc sayisini ekrana yazdirir.......................passed
+]]></system-out>
+</testcase>
+<testcase classname="Walmart Urun Arama" name="TC08_kullanici walmartta urun arar 3" time="8.304">
+<system-out><![CDATA[Given kullanici "https://walmart.com" sayfasina gider.......................passed
+And kullanici walmart aramakutusuna "flower" yazar ve arar..................passed
+Then kullanici walmart sonuc sayisini ekrana yazdirir.......................passed
+]]></system-out>
+</testcase>
+</testsuite>
+http://www.amazon.com" sayfasina gider.....................passed
+And kullanici amazonda dropdownda "Books" secer.............................passed
+And kullanici amazonda aramakutusuna "miserables" yazar ve arar.............passed
+Then kullanici amazonda sonuc sayisini ekrana yazdirir......................passed
+]]></system-out>
+</testcase>
+<testcase classname="Amazon Arama" name="TC02_kullanici amazonda arama yapar" time="0.467">
+<skipped><![CDATA[Given kullanici amazon sayfasina gider......................................undefined
+And kullanici headphones aramasi yapar......................................undefined
+Then kullanici sonuc sayisini ekrana yazdirir...............................undefined
+]]></skipped>
+</testcase>
+<testcase classname="Amazon Urun Arama" name="TC04_kullanici amazonda urun aramasi yapar" time="4.381">
+<system-out><![CDATA[Given kullanici "http://amazon.com" sayfasina gider.........................passed
+And kullanici amazonda aramakutusuna "drone" yazar ve arar..................passed
+Then kullanici amazonda sonuc sayisini ekrana yazdirir......................passed
+]]></system-out>
+</testcase>
+</testsuite>
