@@ -1,40 +1,32 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<testsuite errors="0" failures="0" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="3" time="35.21">
-<testcase classname="Walmart Urun Arama" name="TC08_kullanici walmartta urun arar" time="15.687">
-<system-out><![CDATA[Given kullanici "https://walmart.com" sayfasina gider.......................passed
-And kullanici walmart aramakutusuna "calculator" yazar ve arar..............passed
-Then kullanici walmart sonuc sayisini ekrana yazdirir.......................passed
-]]></system-out>
-</testcase>
-<testcase classname="Walmart Urun Arama" name="TC08_kullanici walmartta urun arar 2" time="10.443">
-<system-out><![CDATA[Given kullanici "https://walmart.com" sayfasina gider.......................passed
-And kullanici walmart aramakutusuna "watch" yazar ve arar...................passed
-Then kullanici walmart sonuc sayisini ekrana yazdirir.......................passed
-]]></system-out>
-</testcase>
-<testcase classname="Walmart Urun Arama" name="TC08_kullanici walmartta urun arar 3" time="8.853">
-<system-out><![CDATA[Given kullanici "https://walmart.com" sayfasina gider.......................passed
-And kullanici walmart aramakutusuna "flower" yazar ve arar..................passed
-Then kullanici walmart sonuc sayisini ekrana yazdirir.......................passed
-]]></system-out>
-</testcase>
-</testsuite>
-ttp://www.amazon.com" sayfasina gider.....................passed
-And kullanici amazonda dropdownda "Books" secer.............................passed
-And kullanici amazonda aramakutusuna "miserables" yazar ve arar.............passed
-Then kullanici amazonda sonuc sayisini ekrana yazdirir......................passed
-]]></system-out>
-</testcase>
-<testcase classname="Amazon Arama" name="TC02_kullanici amazonda arama yapar" time="4.864">
-<system-out><![CDATA[Given kullanici "http:/amazon.com" sayfasina gider..........................passed
-And kullanici amazonda aramakutusuna "head phones" yazar ve arar............passed
-Then kullanici amazonda sonuc sayisini ekrana yazdirir......................passed
-]]></system-out>
-</testcase>
-<testcase classname="Amazon Urun Arama" name="TC04_kullanici amazonda urun aramasi yapar" time="4.377">
-<system-out><![CDATA[Given kullanici "http://amazon.com" sayfasina gider.........................passed
-And kullanici amazonda aramakutusuna "drone" yazar ve arar..................passed
-Then kullanici amazonda sonuc sayisini ekrana yazdirir......................passed
-]]></system-out>
-</testcase>
+<testsuite errors="0" failures="1" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="1" time="25.804">
+    <testcase classname="Koala Palace" name="TC22_kullanici DateStarti DAteEndden sonra bir tarih girerek roomreservation olusturur" time="25.5">
+        <failure message="" type="java.lang.AssertionError"><![CDATA[Given kullanici "http://www.kaolapalace-qa-environment2.com/Account/LogOn?ReturnUrl=%2FAdmin%2FUserAdmin" sayfasina gider.passed
+And kullanici kullaniciadi ve sifresini girer...............................passed
+Then kullanici giris islemini gerceklestirir................................passed
+Given kullanici roomreservation sayfasina gider.............................passed
+And kullanici room reservation bolumunde IDUser1 "manager2" dropdowndan secer.passed
+And kullanici room reservation bolumunde IDUser2 "Hilton" dropdowndan secer.passed
+And kullanici room reservation bolumunde Price kismina "300" girer..........passed
+And kullanici room reservation bolumunde DateStart kismina "11/22/2021" girer.passed
+And kullanici room reservation bolumunde DateEnd kismina "11/11/2021" girer.passed
+And kullanici room reservation bolumunde AdultAmount "2" girer..............passed
+And kullanici room reservation bolumunde ChildrenAmount "2" girer...........passed
+And kullanici room reservation bolumunde ContactNameSurname "Ali Efe" girer.passed
+And kullanici room reservation bolumunde ContactPhone "05452345623" girer...passed
+And kullanici room reservation bolumunde ContactEmail "asd@gmail.com" girer.passed
+And kullanici room reservation bolumunde Notes "naber" ekler................passed
+And kullanici room reservation bolumunde save buttonuna tiklar..............passed
+Then And kullanici basarili yazisini assert etmemeli........................failed
+
+StackTrace:
+java.lang.AssertionError
+	at org.junit.Assert.fail(Assert.java:87)
+	at org.junit.Assert.assertTrue(Assert.java:42)
+	at org.junit.Assert.assertFalse(Assert.java:65)
+	at org.junit.Assert.assertFalse(Assert.java:75)
+	at stepdefinitions.KoalaPalaceStepDef.and_kullanici_basarili_yazisini_assert_etmemeli(KoalaPalaceStepDef.java:278)
+	at ✽.And kullanici basarili yazisini assert etmemeli.(file:///C:/Users/onurn/IdeaProjects/CucumberProje/src/test/resources/features/Koalapalace.feature:261)
+]]></failure>
+    </testcase>
 </testsuite>
