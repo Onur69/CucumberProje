@@ -1,32 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<testsuite errors="0" failures="1" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="1" time="25.804">
-    <testcase classname="Koala Palace" name="TC22_kullanici DateStarti DAteEndden sonra bir tarih girerek roomreservation olusturur" time="25.5">
-        <failure message="" type="java.lang.AssertionError"><![CDATA[Given kullanici "http://www.kaolapalace-qa-environment2.com/Account/LogOn?ReturnUrl=%2FAdmin%2FUserAdmin" sayfasina gider.passed
+<testsuite errors="0" failures="0" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="1" time="22.459">
+    <testcase classname="Koala Palace" name="TC26_kullanici hotelreservationlist sayfasinda verileri girerek reservation arar" time="22.181">
+        <system-out><![CDATA[Given kullanici "http://www.kaolapalace-qa-environment2.com/Account/LogOn?ReturnUrl=%2FAdmin%2FUserAdmin" sayfasina gider.passed
 And kullanici kullaniciadi ve sifresini girer...............................passed
 Then kullanici giris islemini gerceklestirir................................passed
-Given kullanici roomreservation sayfasina gider.............................passed
-And kullanici room reservation bolumunde IDUser1 "manager2" dropdowndan secer.passed
-And kullanici room reservation bolumunde IDUser2 "Hilton" dropdowndan secer.passed
-And kullanici room reservation bolumunde Price kismina "300" girer..........passed
-And kullanici room reservation bolumunde DateStart kismina "11/22/2021" girer.passed
-And kullanici room reservation bolumunde DateEnd kismina "11/11/2021" girer.passed
-And kullanici room reservation bolumunde AdultAmount "2" girer..............passed
-And kullanici room reservation bolumunde ChildrenAmount "2" girer...........passed
-And kullanici room reservation bolumunde ContactNameSurname "Ali Efe" girer.passed
-And kullanici room reservation bolumunde ContactPhone "05452345623" girer...passed
-And kullanici room reservation bolumunde ContactEmail "asd@gmail.com" girer.passed
-And kullanici room reservation bolumunde Notes "naber" ekler................passed
-And kullanici room reservation bolumunde save buttonuna tiklar..............passed
-Then And kullanici basarili yazisini assert etmemeli........................failed
-
-StackTrace:
-java.lang.AssertionError
-	at org.junit.Assert.fail(Assert.java:87)
-	at org.junit.Assert.assertTrue(Assert.java:42)
-	at org.junit.Assert.assertFalse(Assert.java:65)
-	at org.junit.Assert.assertFalse(Assert.java:75)
-	at stepdefinitions.KoalaPalaceStepDef.and_kullanici_basarili_yazisini_assert_etmemeli(KoalaPalaceStepDef.java:278)
-	at ✽.And kullanici basarili yazisini assert etmemeli.(file:///C:/Users/onurn/IdeaProjects/CucumberProje/src/test/resources/features/Koalapalace.feature:261)
-]]></failure>
+Given kullanici hotelroomreservationlist sayfasina gider....................passed
+And kullanici hotelroomreservationlist hotelroomid bolumunde "team06" secer.passed
+And kullanici hotelroomreservationlist arama kutusuna tiklar................passed
+Then kullanici hotelroomreservationlist kayitlari inceler...................passed
+]]></system-out>
     </testcase>
 </testsuite>

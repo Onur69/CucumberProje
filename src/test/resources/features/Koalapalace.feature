@@ -259,3 +259,37 @@
       And kullanici room reservation bolumunde Notes "naber" ekler
       And kullanici room reservation bolumunde save buttonuna tiklar
       Then And kullanici basarili yazisini assert etmemeli.
+
+      @hotelsearch
+      Scenario: TC23_kullanici hotel list sayfasinda code girerek hotel arar
+        Given kullanici hotellist sayfasina gider
+        And kullanici hotellist sayfasinda Code kismina "1234" girer
+        And kullanici hotellist sayfasinda Search buttonuna tiklar
+        Then kullanici hotellist bolumundeki kayitlari assert eder
+
+      @hotelsearchnegative01
+      Scenario: TC25_kullanici hotel list sayfasinda code girerek hotel arar
+        Given kullanici hotellist sayfasina gider
+        And kullanici hotellist sayfasinda Code kismina "-10" girer
+        And kullanici hotellist sayfasinda Search buttonuna tiklar
+        Then kullanici hotellist sonuc bolumunde kayit bulunamadi yazisini gorur
+
+      @hotelroomsearch
+      Scenario: TC24_kullanici hotelroomlist sayfasinda verileri girerek hotelroom arar
+        Given kullanici hotelroomlist sayfasina gider
+        And kullanici hotelroomlist idhotel bolumunde "Star" secer
+        And kullanici hotelroomlist code bolumunde "12345" girer
+        And kullanici hotelroomlist name bolumunde "Techproed" girer
+        And kullanici hotelroomlist location bolumune "USA" girer
+        And kullanici hotelroomlist sayfasinda search buttonuna tiklar
+        Then kullanici hotelroomlist bolumundeki kayitlari inceler
+
+      @hotelreservationsearch
+      Scenario: TC26_kullanici hotelreservationlist sayfasinda verileri girerek reservation arar
+        Given kullanici hotelroomreservationlist sayfasina gider
+        And kullanici hotelroomreservationlist hotelroomid bolumunde "team06" secer
+        And kullanici hotelroomreservationlist arama kutusuna tiklar
+        Then kullanici hotelroomreservationlist kayitlari inceler
+
+
+

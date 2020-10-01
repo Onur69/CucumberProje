@@ -5,44 +5,39 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import utilities.Driver;
 
+import java.util.List;
+
 public class KoalaPalacePage {
     public KoalaPalacePage(){
         PageFactory.initElements(Driver.getDriver(),this);
     }
     @FindBy(id = "UserName")
     public WebElement userNameKutusu;
-
     @FindBy(id = "Password")
     public WebElement passwordKutusu;
-
     @FindBy(xpath = "//button[.='Log in']")
     public WebElement girisButonu;
-
     @FindBy(id = "Code")
-    public WebElement hotelCreateCodeKutusu;
+    //===============================================
 
+    public WebElement hotelCreateCodeKutusu;
     @FindBy(id = "Name")
     public WebElement hotelCreateNameKutusu;
-
     @FindBy(id = "Address")
     public WebElement hotelCreateAdressKutusu;
-
     @FindBy(id = "Phone")
     public WebElement hotelCreatePhoneKutusu;
-
     @FindBy (id = "Email")
     public WebElement hotelCreateEmailKutusu;
-
     @FindBy (id = "IDGroup")
     public WebElement hotelCreateIDGroupDropdown;
-
     @FindBy (id = "btnSubmit")
     public WebElement hotelCreateSaveButonu;
-
     @FindBy (className = "bootbox-body")
     public WebElement hotelCreateBasariliYazisi;
-
     @FindBy(id = "IDHotel")
+    //=================================================
+
     public WebElement hotelRoomCreateIDHotel;
     @FindBy(id = "Code")
     public WebElement hotelRoomCreateCode;
@@ -68,7 +63,7 @@ public class KoalaPalacePage {
     public WebElement hotelRoomCreateSonucYazisi;
     @FindBy ( xpath = "//*[@data-id='500']")
     public WebElement hotelRoomCreatePrice500 ;
-
+//=============================================================
     @FindBy(id = "IDUser")
     public WebElement roomReservationIDUser1;
     @FindBy(id = "IDHotelRoom")
@@ -99,5 +94,44 @@ public class KoalaPalacePage {
     @FindBy(xpath = "//label[@class='error']")
     public WebElement hataMesaji;
 
+    //=======================================================
 
+    @FindBy(name = "Code")
+    public WebElement hotelListCodeKutusu;
+    @FindBy(xpath = "//button[@class='btn btn-sm yellow filter-submit margin-bottom']")
+    public WebElement hotelListSearchButtonu;
+    @FindBy(xpath = "//tbody/tr[1]")
+    public WebElement hotelListIlkSatir;
+    @FindBy(xpath = "//tbody/tr[1]/td[2]")
+    public WebElement hotelListIlkSatirCodeSutunu;
+    @FindBy(className = "dataTables_info")
+    public WebElement hotelListToplamSonucSayisi;
+    //=================================================
+
+    @FindBy(id = "lkpHotels")
+    public WebElement hotelRoomListIDHotelDropdown;
+    @FindBy(name = "Code")
+    public WebElement hotelRoomListCodeKutusu;
+    @FindBy(name = "Name")
+    public WebElement hotelRoomListNameKutusu;
+    @FindBy(name = "Location")
+    public WebElement hotelRoomListLocationKutusu;
+    @FindBy(xpath = "//button[@class='btn btn-sm yellow filter-submit margin-bottom']")
+    public WebElement hotelRoomListAramaKutusu;
+    @FindBy(className = "dataTables_info")
+    public WebElement hotelRoomListLSonucSayisi;
+    @FindBy(xpath = "//tbody/tr[1]")
+    public WebElement hotelRoomListIlkSatir;
+    //=======================================================
+
+    @FindBy(className = "dataTables_empty")
+    public WebElement hotelCreateKayitBulunmadiYazisi;
+    //=======================================================
+
+    @FindBy(id = "lkpHotelRooms")
+    public WebElement hotelReservationListHotelRoomIdDropdown;
+    @FindBy(xpath = "//button[@class='btn btn-sm yellow filter-submit margin-bottom']")
+    public WebElement hotelReservationListAramaKutusu;
+    @FindBy(xpath = "//tbody/tr")
+    public List<WebElement> hotelResrvationListIlkSayfaSonuclari;
 }

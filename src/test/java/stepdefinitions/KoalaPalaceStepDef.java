@@ -4,6 +4,7 @@ import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.eo.Se;
 import org.junit.Assert;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.Select;
 import pages.KoalaPalacePage;
@@ -277,6 +278,122 @@ public class KoalaPalaceStepDef {
         }
         Assert.assertFalse(page.roomReservationBasariliYazisi.isDisplayed());
     }
+    //===========================================================================
+    @Given("kullanici hotellist sayfasina gider")
+    public void kullanici_hotellist_sayfasina_gider() {
+        Driver.getDriver().get("http://www.kaolapalace-qa-environment2.com/admin/HotelAdmin");
+    }
+
+    @Given("kullanici hotellist sayfasinda Code kismina {string} girer")
+    public void kullanici_hotellist_sayfasinda_Code_kismina_girer(String string) {
+    page.hotelListCodeKutusu.sendKeys(string);
+    }
+
+    @Given("kullanici hotellist sayfasinda Search buttonuna tiklar")
+    public void kullanici_hotellist_sayfasinda_Search_buttonuna_tiklar() {
+    page.hotelListSearchButtonu.click();
+    }
+
+    @Then("kullanici hotellist bolumundeki kayitlari assert eder")
+    public void kullanici_hotellist_bolumundeki_kayitlari_assert_eder() {
+        try {
+            Thread.sleep(3000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+        String sonucSayisi= page.hotelListToplamSonucSayisi.getText();
+        System.out.println(sonucSayisi);
+
+        String ilkSatir= page.hotelListIlkSatir.getText();
+        System.out.println(ilkSatir);
+
+        String ilkSatirCodeSutunu= page.hotelListIlkSatirCodeSutunu.getText();
+        System.out.println(ilkSatirCodeSutunu);
+
+    }
+    //===============================================================================
+    @Given("kullanici hotelroomlist sayfasina gider")
+    public void kullanici_hotelroomlist_sayfasina_gider() {
+        Driver.getDriver().get("http://www.kaolapalace-qa-environment2.com/admin/HotelRoomAdmin");
+    }
+
+    @Given("kullanici hotelroomlist idhotel bolumunde {string} secer")
+    public void kullanici_hotelroomlist_idhotel_bolumunde_secer(String string) {
+    Select select=new Select(page.hotelRoomListIDHotelDropdown);
+    select.selectByVisibleText(string);
+    }
+
+    @Given("kullanici hotelroomlist code bolumunde {string} girer")
+    public void kullanici_hotelroomlist_code_bolumunde_girer(String string) {
+    page.hotelRoomListCodeKutusu.sendKeys(string);
+    }
+
+    @Given("kullanici hotelroomlist name bolumunde {string} girer")
+    public void kullanici_hotelroomlist_name_bolumunde_girer(String string) {
+    page.hotelRoomListNameKutusu.sendKeys(string);
+    }
+
+    @Given("kullanici hotelroomlist location bolumune {string} girer")
+    public void kullanici_hotelroomlist_location_bolumune_girer(String string) {
+    page.hotelRoomListLocationKutusu.sendKeys(string);
+    }
+
+    @Given("kullanici hotelroomlist sayfasinda search buttonuna tiklar")
+    public void kullanici_hotelroomlist_sayfasinda_search_buttonuna_tiklar() {
+    page.hotelRoomListAramaKutusu.click();
+    }
+
+    @Then("kullanici hotelroomlist bolumundeki kayitlari inceler")
+    public void kullanici_hotelroomlist_bolumundeki_kayitlari_inceler() {
+        try {
+            Thread.sleep(3000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+        String sonucSayisi= page.hotelRoomListLSonucSayisi.getText();
+        System.out.println(sonucSayisi);
+
+        String ilkSatir=page.hotelRoomListIlkSatir.getText();
+        System.out.println(ilkSatir);
+    }
+        @Then("kullanici hotellist sonuc bolumunde kayit bulunamadi yazisini gorur")
+        public void kullanici_hotellist_sonuc_bolumunde_kayit_bulunamadi_yazisini_gorur() {
+            Assert.assertTrue(page.hotelCreateKayitBulunmadiYazisi.isDisplayed());
+        }
+        //======================================================================================
+
+    @Given("kullanici hotelroomreservationlist sayfasina gider")
+    public void kullanici_hotelroomreservationlist_sayfasina_gider() {
+        Driver.getDriver().get("http://www.kaolapalace-qa-environment2.com/admin/RoomReservationAdmin");
+    }
+
+    @Given("kullanici hotelroomreservationlist hotelroomid bolumunde {string} secer")
+    public void kullanici_hotelroomreservationlist_hotelroomid_bolumunde_secer(String string) {
+    Select select=new Select(page.hotelReservationListHotelRoomIdDropdown);
+    select.selectByVisibleText(string);
+    }
+
+    @Given("kullanici hotelroomreservationlist arama kutusuna tiklar")
+    public void kullanici_hotelroomreservationlist_arama_kutusuna_tiklar() {
+        page.hotelReservationListAramaKutusu.click();
+    }
+
+    @Then("kullanici hotelroomreservationlist kayitlari inceler")
+    public void kullanici_hotelroomreservationlist_kayitlari_inceler() {
+        try {
+            Thread.sleep(4000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+
+        for (WebElement w: page.hotelResrvationListIlkSayfaSonuclari  ) {
+            System.out.println(w.getText());
+        }
+    }
+
+
+
+
 
 
 }
