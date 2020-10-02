@@ -2,11 +2,13 @@ package stepdefinitions;
 
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
-import io.cucumber.java.eo.Se;
 import org.junit.Assert;
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import pages.KoalaPalacePage;
 import utilities.Driver;
 
@@ -390,6 +392,112 @@ public class KoalaPalaceStepDef {
             System.out.println(w.getText());
         }
     }
+    //==================================================================================
+    @Given("kullanici generaldata sayfasina gider")
+    public void kullanici_generaldata_sayfasina_gider() {
+        Driver.getDriver().get("http://www.kaolapalace-qa-environment2.com/admin/HotelAdmin/Edit?Id=4");
+    }
+
+    @Given("kullanici generaldata bolumunde code kismina {string} girer")
+    public void kullanici_generaldata_bolumunde_code_kismina_girer(String string) {
+    page.generalDataCode.clear();
+    page.generalDataCode.sendKeys(string);
+    }
+
+    @Given("kullanici generaldata bolumunde name kismina {string} girer")
+    public void kullanici_generaldata_bolumunde_name_kismina_girer(String string) {
+        page.generalDataName.clear();
+        page.generalDataName.sendKeys(string);
+    }
+
+    @Given("kullanici generaldata bolumunde address kismina {string} girer")
+    public void kullanici_generaldata_bolumunde_address_kismina_girer(String string) {
+        page.generalDataAddress.clear();
+        page.generalDataAddress.sendKeys(string);
+    }
+
+    @Given("kullanici generaldata bolumunde phone kismina {string} girer")
+    public void kullanici_generaldata_bolumunde_phone_kismina_girer(String string) {
+        page.generalDataPhone.clear();
+        page.generalDataPhone.sendKeys(string);
+    }
+
+    @Given("kullanici generaldata bolumunde email kismina {string} girer")
+    public void kullanici_generaldata_bolumunde_email_kismina_girer(String string) {
+        page.generalDataEmail.clear();
+        page.generalDataEmail.sendKeys(string);
+    }
+
+    @Given("kullanici generaldata bolumunde group dropdown bolumunden {string} secer")
+    public void kullanici_generaldata_bolumunde_group_dropdown_bolumunden_secer(String string) {
+    Select select=new Select(page.generalDataIDGroup);
+    select.selectByVisibleText(string);
+    }
+
+    @Given("kullanici generaldata bolumunde save buttonuna tiklar")
+    public void kullanici_generaldata_bolumunde_save_buttonuna_tiklar() {
+        try {
+            Thread.sleep(2000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+        page.generalDataSaveButtonu.click();
+    }
+
+    @Then("kullanici generaldata bolumunde basarili yazisini assert eder")
+    public void kullanici_generaldata_bolumunde_basarili_yazisini_assert_eder() {
+        try {
+            Thread.sleep(2000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+        System.out.println(page.generalDataBasariliYazisi.getText());
+        Assert.assertTrue(page.generalDataBasariliYazisi.isDisplayed());
+
+    }
+    //========================================================================
+    @Given("kullanici hotelroomedit {string} sayfasina gider")
+    public void kullanici_hotelroomedit_sayfasina_gider(String string) {
+        Driver.getDriver().get(string);
+    }
+
+    @Given("kullanici hotelroomedit sayfasinda properties bolumune tiklar")
+    public void kullanici_hotelroomedit_sayfasinda_properties_bolumune_tiklar() {
+    page.hotelRoomEditPropertiesLinki.click();
+    }
+    @Given("kullanici hotelroomedit sayfasinda tip olarak {string} secer")
+    public void kullanici_hotelroomedit_sayfasinda_tip_olarak_secer(String string) {
+    Select select=new Select(page.hotelRoomEditPropertiesTipDropdown);
+    select.selectByVisibleText(string);
+    }
+
+    @Given("kullanici hotelroomedit sayfasinda code olarak {string} girer")
+    public void kullanici_hotelroomedit_sayfasinda_code_olarak_girer(String string) {
+    page.hotelRoomEditPropertiesCodeKutusu.sendKeys(string);
+    }
+
+    @Given("kullanici hotelroomedit sayfasinda value olarak {string} girer")
+    public void kullanici_hotelroomedit_sayfasinda_value_olarak_girer(String string) {
+    page.hotelRoomEditPropertiesValueKutusu.sendKeys(string);
+    }
+
+    @Given("kullanici hotelroomedit sayfasinda save butonuna tiklar")
+    public void kullanici_hotelroomedit_sayfasinda_save_butonuna_tiklar() {
+    page.hotelRoomEditPropertiesSaveButonu.click();
+    }
+
+    @Then("kullanici hotelroomedit sayfasinda properties bolumunde yeni kayit oldugunu assert eder")
+    public void kullanici_hotelroomedit_sayfasinda_properties_bolumunde_yeni_kayit_oldugunu_assert_eder() {
+        try {
+            Thread.sleep(3000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+        Assert.assertTrue(page.hotelRoomEditPropertiesIlkKayitRemoveButonu.isDisplayed());
+    }
+
+
+
 
 
 

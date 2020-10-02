@@ -12,7 +12,7 @@ import org.junit.runner.RunWith;
                 "junit:target/xml-report/cucumber.xml"},
         features = {"src/test/resources/features"},
         glue = {"stepdefinitions"},
-        tags = "@hotelreservationsearch" ,//{"@tag1" , "@tag2" ,"@tag3"} veya {"@tag1 , @tag2 ,@tag3"}seklind zincir yapilabiliyor
+        tags = "@hotelroomedit" ,//{"@tag1" , "@tag2" ,"@tag3"} veya {"@tag1 , @tag2 ,@tag3"}seklind zincir yapilabiliyor
         dryRun =false
 )
 public class KoalaPalaceRunner {

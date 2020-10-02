@@ -291,5 +291,27 @@
         And kullanici hotelroomreservationlist arama kutusuna tiklar
         Then kullanici hotelroomreservationlist kayitlari inceler
 
+      @hoteledit
+      Scenario: TC27_kullanici generaldata bolumunde duzenleme yapar
+        Given kullanici generaldata sayfasina gider
+        And kullanici generaldata bolumunde code kismina "69" girer
+        And kullanici generaldata bolumunde name kismina "Kale" girer
+        And kullanici generaldata bolumunde address kismina "Bayburt" girer
+        And kullanici generaldata bolumunde phone kismina "02112345678" girer
+        And kullanici generaldata bolumunde email kismina "kale@gmail.com" girer
+        And kullanici generaldata bolumunde group dropdown bolumunden "Hotel Type1" secer
+        And kullanici generaldata bolumunde save buttonuna tiklar
+        Then kullanici generaldata bolumunde basarili yazisini assert eder
+
+      @hotelroomedit
+      Scenario: TC28_kullanici hotelroomedit sayfasinda properties bolumundeki veriyi siler
+        Given kullanici hotelroomedit "http://www.kaolapalace-qa-environment2.com/admin/HotelRoomAdmin/Edit?Id=472" sayfasina gider
+        And kullanici hotelroomedit sayfasinda properties bolumune tiklar
+        And kullanici hotelroomedit sayfasinda tip olarak "room prop1" secer
+        And kullanici hotelroomedit sayfasinda code olarak "4444" girer
+        And kullanici hotelroomedit sayfasinda value olarak "sistem bozuldu" girer
+        And kullanici hotelroomedit sayfasinda save butonuna tiklar
+        Then kullanici hotelroomedit sayfasinda properties bolumunde yeni kayit oldugunu assert eder
+
 
 
