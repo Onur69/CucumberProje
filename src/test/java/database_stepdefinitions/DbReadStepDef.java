@@ -50,6 +50,9 @@ public class DbReadStepDef {
         String yirminciSatirdakiVeri = resultSet.getObject(string).toString();
         System.out.println(yirminciSatirdakiVeri);
 
+        resultSet.last();
+        System.out.println("Son satir: " + resultSet.getObject("Name").toString());
+
         while(resultSet.next()){
             // iterator, bulunduğu bölümdeki resultset'in "DateStart" sütununda veriyi alır.
             Object veri = resultSet.getObject(string);

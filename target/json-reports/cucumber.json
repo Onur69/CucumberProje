@@ -3,7 +3,7 @@
     "line": 2,
     "elements": [
       {
-        "start_timestamp": "2020-11-03T20:17:49.461Z",
+        "start_timestamp": "2020-11-03T20:26:58.956Z",
         "line": 3,
         "name": "kullanici hotel tablosundaki verileri okur",
         "description": "",
@@ -13,7 +13,7 @@
         "steps": [
           {
             "result": {
-              "duration": 1599786300,
+              "duration": 1586388200,
               "status": "passed"
             },
             "line": 4,
@@ -25,7 +25,7 @@
           },
           {
             "result": {
-              "duration": 261370600,
+              "duration": 241588100,
               "status": "passed"
             },
             "line": 5,
@@ -47,7 +47,7 @@
           },
           {
             "result": {
-              "duration": 615132800,
+              "duration": 582720100,
               "status": "passed"
             },
             "line": 6,

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<testsuite errors="0" failures="0" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="1" time="2.845">
-    <testcase classname="Veri Okuma" name="kullanici hotel tablosundaki verileri okur" time="2.553">
+<testsuite errors="0" failures="0" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="1" time="2.724">
+    <testcase classname="Veri Okuma" name="kullanici hotel tablosundaki verileri okur" time="2.483">
         <system-out><![CDATA[Given kullanici veritabanina baglanir.......................................passed
 And kullanici "tHOTEL" tablosundaki "Name" verilerini alir..................passed
 And kullanici "Name" sutunundaki verileri okur..............................passed
