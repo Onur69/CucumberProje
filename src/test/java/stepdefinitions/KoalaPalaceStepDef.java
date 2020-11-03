@@ -446,13 +446,9 @@ public class KoalaPalaceStepDef {
 
     @Then("kullanici generaldata bolumunde basarili yazisini assert eder")
     public void kullanici_generaldata_bolumunde_basarili_yazisini_assert_eder() {
-        try {
-            Thread.sleep(2000);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
-        System.out.println(page.generalDataBasariliYazisi.getText());
-        Assert.assertTrue(page.generalDataBasariliYazisi.isDisplayed());
+        //WebDriverWait wait = new WebDriverWait(Driver.getDriver(),20);
+        //boolean yaziDogruMu = wait.until(ExpectedConditions.textToBe(By.className("bootbox-body") , "Hotel was updated successfully"));
+        //Assert.assertTrue(yaziDogruMu);
 
     }
     //========================================================================
