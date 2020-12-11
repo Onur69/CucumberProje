@@ -1,0 +1,87 @@
+[
+  {
+    "line": 1,
+    "elements": [
+      {
+        "start_timestamp": "2020-12-11T10:32:41.173Z",
+        "before": [
+          {
+            "result": {
+              "duration": 1000000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "stepdefinitions.Hooks.setUp()"
+            }
+          }
+        ],
+        "line": 3,
+        "name": "TC01_kullanici googleda arama yapar",
+        "description": "",
+        "id": "google-arama;tc01-kullanici-googleda-arama-yapar",
+        "after": [
+          {
+            "result": {
+              "duration": 1206000000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "stepdefinitions.Hooks.tearDown(io.cucumber.java.Scenario)"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 9389000000,
+              "status": "passed"
+            },
+            "line": 4,
+            "name": "kullanici google sayfasina gider",
+            "match": {
+              "location": "stepdefinitions.GoogleAramaStepDefinitions.kullanici_google_sayfasina_gider()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 1601000000,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "techproeducation aramasi yapar",
+            "match": {
+              "location": "stepdefinitions.GoogleAramaStepDefinitions.techproeducation_aramasi_yapar()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 3037000000,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "sayfa basligini kontrol eder",
+            "match": {
+              "location": "stepdefinitions.GoogleAramaStepDefinitions.sayfa_basligini_kontrol_eder()"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@google"
+          }
+        ]
+      }
+    ],
+    "name": "Google Arama",
+    "description": "",
+    "id": "google-arama",
+    "keyword": "Feature",
+    "uri": "file:src/test/resources/features/googlearama.feature",
+    "tags": []
+  }
+]

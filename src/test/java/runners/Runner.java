@@ -10,10 +10,11 @@ import org.junit.runner.RunWith;
 @CucumberOptions(
         plugin = {"html:target/default-cucumber-reports",//html formatinda rapor olusturmak icin
                 "json:target/json-reports/cucumber.json",
-                "junit:target/xml-report/cucumber.xml"},  // rapor oluşturmak için
+                "junit:target/xml-report/cucumber.xml",
+                "rerun:target/failed.txt"  },  // rapor oluşturmak için
         features = {"src/test/resources/features"}, //features klasorunun adresi
         glue = {"stepdefinitions"},//testlerin icerisinde oldugu paketin ismi
-        tags = "@walmart" , // seçtiğiniz tag'a ait testler çalıştırılır.
+        tags = "@google" , // seçtiğiniz tag'a ait testler çalıştırılır.
         dryRun =false //senaryoda olusturdugumuz ancak henuz test methodu yazilmamis olan
                         //stepslerin methodlarini consol'da gormek icin "dryRun=true"
                         //seklinde kullaniyoruz
