@@ -1,9 +1,21 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<testsuite errors="0" failures="0" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="1" time="15.605">
-<testcase classname="Google Arama" name="TC01_kullanici googleda arama yapar" time="15.307">
-<system-out><![CDATA[Given kullanici google sayfasina gider......................................passed
-And techproeducation aramasi yapar..........................................passed
-Then sayfa basligini kontrol eder...........................................passed
+<testsuite errors="0" failures="0" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="3" time="34.989">
+<testcase classname="Ebay Urun Arama" name="TC06_kullanici ebayda urunler arar" time="12.654">
+<system-out><![CDATA[Given kullanici "http://www.ebay.com" sayfasina gider.......................passed
+And kullanici ebayda aramakutusuna "bebek arabasi" yazar ve arar............passed
+Then kullanici ebaydaki sonuc sayisini ekrana yazdirir......................passed
+]]></system-out>
+</testcase>
+<testcase classname="Ebay Urun Arama" name="TC06_kullanici ebayda urunler arar 2" time="11.201">
+<system-out><![CDATA[Given kullanici "http://www.ebay.com" sayfasina gider.......................passed
+And kullanici ebayda aramakutusuna "araba" yazar ve arar....................passed
+Then kullanici ebaydaki sonuc sayisini ekrana yazdirir......................passed
+]]></system-out>
+</testcase>
+<testcase classname="Ebay Urun Arama" name="TC06_kullanici ebayda urunler arar 3" time="10.751">
+<system-out><![CDATA[Given kullanici "http://www.ebay.com" sayfasina gider.......................passed
+And kullanici ebayda aramakutusuna "bisiklet" yazar ve arar.................passed
+Then kullanici ebaydaki sonuc sayisini ekrana yazdirir......................passed
 ]]></system-out>
 </testcase>
 </testsuite>
